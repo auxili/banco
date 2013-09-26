@@ -4,6 +4,8 @@
  */
 package com.fpmislata.banco;
 
+import java.math.BigDecimal;
+
 /**
  *
  * @author KiKe
@@ -13,10 +15,10 @@ public class CuentaBancaria {
 	private SucursalBancaria sucursalBancaria;
 	private String numeroCuenta;
         private String dc;
-	private float saldo;
+	private BigDecimal saldo;
 	private String cif;
 
-    public CuentaBancaria(int idCuentaBancaria, SucursalBancaria sucursalBancaria, String numeroCuenta, String dc, float saldo, String cif) {
+    public CuentaBancaria(int idCuentaBancaria, SucursalBancaria sucursalBancaria, String numeroCuenta, String dc, BigDecimal saldo, String cif) {
         this.idCuentaBancaria = idCuentaBancaria;
         this.sucursalBancaria = sucursalBancaria;
         this.numeroCuenta = numeroCuenta;
@@ -84,14 +86,14 @@ public class CuentaBancaria {
     /**
      * @return the saldo
      */
-    public float getSaldo() {
+    public BigDecimal getSaldo() {
         return saldo;
     }
 
     /**
      * @param saldo the saldo to set
      */
-    public void setSaldo(float saldo) {
+    public void setSaldo(BigDecimal saldo) {
         this.saldo = saldo;
     }
 

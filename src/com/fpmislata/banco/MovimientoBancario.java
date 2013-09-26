@@ -3,6 +3,7 @@
  * and open the template in the editor.
  */
 package com.fpmislata.banco;
+import java.math.BigDecimal;
 import java.util.Date;
 /**
  *
@@ -11,12 +12,12 @@ import java.util.Date;
 public class MovimientoBancario {
     	private int idMovimientoBancario;
 	private TipoMovimientoBancario tipoMovimientoBancario;
-	private float importe;
+	private BigDecimal importe;
 	private Date fecha;
-	private float saldoTotal;
+	private BigDecimal saldoTotal;
 	private String concepto;
 
-    public MovimientoBancario(int idMovimientoBancario, TipoMovimientoBancario tipoMovimientoBancario, float importe, Date fecha, float saldoTotal, String concepto) {
+    public MovimientoBancario(int idMovimientoBancario, TipoMovimientoBancario tipoMovimientoBancario, BigDecimal importe, Date fecha, BigDecimal saldoTotal, String concepto) {
         this.idMovimientoBancario = idMovimientoBancario;
         this.tipoMovimientoBancario = tipoMovimientoBancario;
         this.importe = importe;
@@ -56,14 +57,14 @@ public class MovimientoBancario {
     /**
      * @return the importe
      */
-    public float getImporte() {
+    public BigDecimal getImporte() {
         return importe;
     }
 
     /**
      * @param importe the importe to set
      */
-    public void setImporte(float importe) {
+    public void setImporte(BigDecimal importe) {
         this.importe = importe;
     }
 
@@ -84,14 +85,14 @@ public class MovimientoBancario {
     /**
      * @return the saldoTotal
      */
-    public float getSaldoTotal() {
+    public BigDecimal getSaldoTotal() {
         return saldoTotal;
     }
 
     /**
      * @param saldoTotal the saldoTotal to set
      */
-    public void setSaldoTotal(float saldoTotal) {
+    public void setSaldoTotal(BigDecimal saldoTotal) {
         this.saldoTotal = saldoTotal;
     }
 
