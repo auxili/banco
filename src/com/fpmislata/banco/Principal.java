@@ -17,5 +17,12 @@ public class Principal {
         BigDecimal c;
         //se suma de la siguiente manera porque es un objeto
         c = a.add(b);
+        
+        //crear dos de cada
+        EntidadBancaria Entidad1, Entidad2;
+        Entidad1 = new EntidadBancaria(01, "001", "entidad01", "4949494949", TipoEntidadBancaria.Banco);
+        Entidad2 = new EntidadBancaria(01, "001", "entidad01", "4949494949", TipoEntidadBancaria.Banco);
+        
+        
     }
 }

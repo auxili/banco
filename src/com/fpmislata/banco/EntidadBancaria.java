@@ -13,13 +13,13 @@ import java.util.List;
  */
 public class EntidadBancaria {
     	private int idEntidad;
-	private int codigoEntidad;
+	private String codigoEntidad;
 	private String nombre;
 	private String cif;
 	private TipoEntidadBancaria tipoEntidadBancaria;
         private List<EntidadBancaria> entidades = new ArrayList();
 
-    public EntidadBancaria(int idEntidad, int codigoEntidad, String nombre, String cif, TipoEntidadBancaria tipoEntidadBancaria) {
+    public EntidadBancaria(int idEntidad, String codigoEntidad, String nombre, String cif, TipoEntidadBancaria tipoEntidadBancaria) {
         this.idEntidad = idEntidad;
         this.codigoEntidad = codigoEntidad;
         this.nombre = nombre;
@@ -44,14 +44,14 @@ public class EntidadBancaria {
     /**
      * @return the codigoEntidad
      */
-    public int getCodigoEntidad() {
+    public String getCodigoEntidad() {
         return codigoEntidad;
     }
 
     /**
      * @param codigoEntidad the codigoEntidad to set
      */
-    public void setCodigoEntidad(int codigoEntidad) {
+    public void setCodigoEntidad(String codigoEntidad) {
         this.codigoEntidad = codigoEntidad;
     }
 
