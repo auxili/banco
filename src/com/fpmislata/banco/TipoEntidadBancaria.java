@@ -8,6 +8,6 @@ package com.fpmislata.banco;
  *
  * @author alumno
  */
-public enum TipoEntidadBancaria {
+public enum TipoEntidadBancaria  {
     Banco, CajaAhorro, CoopCredito,EstableFinanCredito;
 }

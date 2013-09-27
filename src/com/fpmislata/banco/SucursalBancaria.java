@@ -3,8 +3,7 @@
  * and open the template in the editor.
  */
 package com.fpmislata.banco;
-
-import java.awt.List;
+import java.util.List;
 import java.util.ArrayList;
 /**
  *
@@ -15,7 +14,7 @@ public class SucursalBancaria {
 	private EntidadBancaria entidadBancaria;
 	private int codigoSucursal;
 	private String nombre;
-        private java.util.List<SucursalBancaria> sucursales = new ArrayList();
+        private List<CuentaBancaria> cuentaBancaria = new ArrayList();
 
     public SucursalBancaria(int idSucursalBancaria, EntidadBancaria entidadBancaria, int codigoSucursal, String nombre) {
         this.idSucursalBancaria = idSucursalBancaria;
@@ -81,17 +80,17 @@ public class SucursalBancaria {
     }
 
     /**
-     * @return the sucursales
+     * @return the cuentaBancaria
      */
-    public java.util.List<SucursalBancaria> getSucursales() {
-        return sucursales;
+    public List<CuentaBancaria> getCuentaBancaria() {
+        return cuentaBancaria;
     }
 
     /**
-     * @param sucursales the sucursales to set
+     * @param cuentaBancaria the cuentaBancaria to set
      */
-    public void setSucursales(java.util.List<SucursalBancaria> sucursales) {
-        this.sucursales = sucursales;
+    public void setCuentaBancaria(List<CuentaBancaria> cuentaBancaria) {
+        this.cuentaBancaria = cuentaBancaria;
     }
         
 }

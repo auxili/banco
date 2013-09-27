@@ -17,7 +17,7 @@ public class EntidadBancaria {
 	private String nombre;
 	private String cif;
 	private TipoEntidadBancaria tipoEntidadBancaria;
-        private List<EntidadBancaria> entidades = new ArrayList();
+        private List<SucursalBancaria> sucursalBancaria= new ArrayList();
 
     public EntidadBancaria(int idEntidad, String codigoEntidad, String nombre, String cif, TipoEntidadBancaria tipoEntidadBancaria) {
         this.idEntidad = idEntidad;
@@ -31,14 +31,14 @@ public class EntidadBancaria {
      * @return the id
      */
     public int getId() {
-        return idEntidad;
+        return getIdEntidad();
     }
 
     /**
      * @param id the id to set
      */
     public void setId(int id) {
-        this.idEntidad = id;
+        this.setIdEntidad(id);
     }
 
     /**
@@ -97,21 +97,36 @@ public class EntidadBancaria {
         this.tipoEntidadBancaria = tipoEntidadBancaria;
     }
 
-    /**
-     * @return the entidades
-     */
-    public List<EntidadBancaria> getEntidades() {
-        return entidades;
+    public String toString(){
+        return "";
     }
 
     /**
-     * @param entidades the entidades to set
+     * @return the idEntidad
      */
-    public void setEntidades(List<EntidadBancaria> entidades) {
-        this.entidades = entidades;
+    public int getIdEntidad() {
+        return idEntidad;
     }
-    public String toString(){
-        return "";
+
+    /**
+     * @param idEntidad the idEntidad to set
+     */
+    public void setIdEntidad(int idEntidad) {
+        this.idEntidad = idEntidad;
+    }
+
+    /**
+     * @return the sucursalBancaria
+     */
+    public List<SucursalBancaria> getSucursalBancaria() {
+        return sucursalBancaria;
+    }
+
+    /**
+     * @param sucursalBancaria the sucursalBancaria to set
+     */
+    public void setSucursalBancaria(List<SucursalBancaria> sucursalBancaria) {
+        this.sucursalBancaria = sucursalBancaria;
     }
 
 }

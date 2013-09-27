@@ -13,11 +13,11 @@ public class MovimientoBancario {
     	private int idMovimientoBancario;
 	private TipoMovimientoBancario tipoMovimientoBancario;
 	private BigDecimal importe;
-	private Date fecha;
+	private String fecha;
 	private BigDecimal saldoTotal;
 	private String concepto;
 
-    public MovimientoBancario(int idMovimientoBancario, TipoMovimientoBancario tipoMovimientoBancario, BigDecimal importe, Date fecha, BigDecimal saldoTotal, String concepto) {
+    public MovimientoBancario(int idMovimientoBancario, TipoMovimientoBancario tipoMovimientoBancario, BigDecimal importe, String fecha, BigDecimal saldoTotal, String concepto) {
         this.idMovimientoBancario = idMovimientoBancario;
         this.tipoMovimientoBancario = tipoMovimientoBancario;
         this.importe = importe;
@@ -71,14 +71,14 @@ public class MovimientoBancario {
     /**
      * @return the fecha
      */
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
     /**
      * @param fecha the fecha to set
      */
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
