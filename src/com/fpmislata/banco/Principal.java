@@ -32,7 +32,7 @@ public class Principal {
          */
         //crear dos de cada
 
-        EntidadBancaria Entidad1, Entidad2;
+        /*EntidadBancaria Entidad1, Entidad2;
         Entidad1 = new EntidadBancaria(01, "001", "entidad01", "4949494949", TipoEntidadBancaria.Banco);
         Entidad2 = new EntidadBancaria(01, "001", "entidad01", "4949494949", TipoEntidadBancaria.Banco);
 
@@ -59,21 +59,18 @@ public class Principal {
         movimientoBancarios.add(movimientoBancario1);
         movimientoBancarios.add(movimientoBancario2);
         imprimeDatosCuentaBancaria(cuentaBancaria1);
-        imprimeDatosCuentaBancaria(cuentaBancaria2);
+        imprimeDatosCuentaBancaria(cuentaBancaria2);*/
 
+        //driver
         Class.forName("com.mysql.jdbc.Driver");
-        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco", "root", "alumno");
-
-
-        String selectSQL = "SELECT dc FROM cuentabancaria WHERE dc = ?";
-        PreparedStatement preparedStatement = conn.prepareStatement(selectSQL);
-        preparedStatement.setInt(1, 1001);
-        ResultSet rs = preparedStatement.executeQuery();
-        while (rs.next()) {
-            String userid = rs.getString("dc");
-            //String username = rs.getString("USERNAME");	
-        }
-        conn.close();
+        //creamos los objetos DAO insert, update, delete
+        EntidadBancaria entidadBancariaInsert = new EntidadBancaria(6, "654654", "entidadInsertadaDAO", "9865498654", TipoEntidadBancaria.Banco);
+        EntidadBancariaDAO entidadBancariaDAO = new EntidadBancariaDAO();
+        //entidadBancariaDAO.insert(entidadBancariaInsert);
+        entidadBancariaDAO.update(entidadBancariaInsert);
+        
+        
+        
     }
 
     static void imprimeDatosCuentaBancaria(CuentaBancaria cuentaBancaria) {

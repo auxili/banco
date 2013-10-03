@@ -60,21 +60,36 @@ public class EntidadBancariaDAO {
         Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco", "root", "alumno");
         String insertTableSQL = "INSERT INTO entidadbancaria"
             + "(id, codigoEntidad, nombre, cif, tipoEntidadBancaria) VALUES"
-            + "(?,?,?,?)";
+            + "(?,?,?,?,?)";
         PreparedStatement preparedStatement2 = conn.prepareStatement(insertTableSQL);
         preparedStatement2.setInt    (1, entidadBancaria.getId());
         preparedStatement2.setString (2, entidadBancaria.getCodigoEntidad());
         preparedStatement2.setString (3, entidadBancaria.getNombre());
         preparedStatement2.setString (4, entidadBancaria.getCif());
-        //preparedStatement2.setEnum (5, entidadBancaria.getTipoEntidadBancaria());
+        preparedStatement2.setString (5, entidadBancaria.getTipoEntidadBancaria().name());
         preparedStatement2.executeUpdate();
         System.out.println("Entrada insertada");
         
         conn.close ();
         System.out.println ("Se ha conectado!!");
     }
-    void update( EntidadBancaria entidadBancaria){
+    void update( EntidadBancaria entidadBancaria) throws Exception{
+        //actualiza el nombre de la entidad 
+        Class.forName("com.mysql.jdbc.Driver");
+        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/banco", "root", "alumno");
         
+        String updateTableSQL = "UPDATE FROM entidadbancaria SET "
+                +"(id, codigoEntidad, nombre, cif, tipoEntidadBancaria) VALUES"
+                + "WHERE id = ?";
+        PreparedStatement preparedStatement4 = conn.prepareStatement(updateTableSQL);
+        preparedStatement4.setInt    (1, 9);
+        preparedStatement4.setString (2, "");
+        preparedStatement4.setString (3, "");
+        preparedStatement4.setString (4, "");
+        preparedStatement4.setString (5, "");
+        preparedStatement4.setInt (6, entidadBancaria.getId());
+        // execute insert SQL stetement
+        preparedStatement4.executeUpdate();
     }
     /*
      *  Borra la entidad bancaria de la base de
