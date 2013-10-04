@@ -66,7 +66,8 @@ public class Principal {
         //creamos los objetos DAO insert, update, delete
         EntidadBancaria entidadBancariaInsert = new EntidadBancaria(6, "654654", "entidadInsertadaDAO", "9865498654", TipoEntidadBancaria.Banco);
         EntidadBancariaDAO entidadBancariaDAO = new EntidadBancariaDAO();
-        //entidadBancariaDAO.insert(entidadBancariaInsert);
+        
+        entidadBancariaDAO.insert(entidadBancariaInsert);//hay que comentarlo porque entidadbancaria ya ha sido creada
         entidadBancariaDAO.update(entidadBancariaInsert);
         
         
