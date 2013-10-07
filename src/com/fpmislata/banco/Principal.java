@@ -64,11 +64,12 @@ public class Principal {
         //driver
         Class.forName("com.mysql.jdbc.Driver");
         //creamos los objetos DAO insert, update, delete
-        EntidadBancaria entidadBancariaInsert = new EntidadBancaria(6, "654654", "entidadInsertadaDAO", "9865498654", TipoEntidadBancaria.Banco);
+        //EntidadBancaria entidadBancaria = new EntidadBancaria(14, "654654", "entidadInsertadaDAO", "9865498654", TipoEntidadBancaria.Banco);
         EntidadBancariaDAO entidadBancariaDAO = new EntidadBancariaDAO();
+        EntidadBancaria entidadBancaria = entidadBancariaDAO.read(6);
         
-        entidadBancariaDAO.insert(entidadBancariaInsert);//hay que comentarlo porque entidadbancaria ya ha sido creada
-        entidadBancariaDAO.update(entidadBancariaInsert);
+        //entidadBancariaDAO.insert(entidadBancariaInsert);//hay que comentarlo porque entidadbancaria ya ha sido creada
+        
         
         
         
